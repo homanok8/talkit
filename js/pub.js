@@ -42,6 +42,12 @@ $(function () {
       $(this).parent().find('.video__pause').stop().fadeIn();
       $(this).parent().find('iframe')[0].contentWindow.postMessage('{"event": "command", "func": "playVideo", "args": ""}', '*');
    });
+   $('.vodbox__play').click(function() {
+      $(this).stop().fadeOut();
+      $(this).parent().find('.vodbox__thum').stop().fadeOut();
+      $(this).parent().find('.vodbox__cover').stop().fadeOut();
+      $(this).parent().find('iframe')[0].contentWindow.postMessage('{"event": "command", "func": "playVideo", "args": ""}', '*');
+   });
 
    // 영상 일시정지
    $('.video__pause').click(function() {
@@ -137,4 +143,15 @@ $(function () {
       slidesOffsetAfter: 34,
       loop: false,
    });
+
+   // 사이드 웨비나 일정 스와이퍼
+   var swiper2 = new Swiper(".wbnr__scroll", {
+      slidesPerView: 'auto',
+      freeMode: true,
+      grabCursor: true,
+      spaceBetween: 10,
+      slidesOffsetAfter: 34,
+      loop: false,
+   });
+
 });

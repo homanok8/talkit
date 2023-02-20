@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Talk IT</title>
+   <link rel="stylesheet" href="../../css/common.css">
+   <link rel="stylesheet" href="../../css/page.css">
+
+   <script src="https://unpkg.com/@yaireo/tagify"></script>
+   <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+   <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+
+   <script src="../../js/lib/jquery/jquery-3.6.0.min.js"></script>
+   <script src="../../js/lib/swiper/swiper-bundle.min.js"></script>
+   <link rel="stylesheet" href="../../js/lib/swiper/swiper-bundle.min.css" />
+   <script src="../../js/pub.js"></script>
+   <script>
+      $(function() {
+         if (document.getElementById('tag')) {
+            var input = document.getElementById('tag');
+            var tagify = new Tagify(input); // initialize Tagify
+
+            // 태그가 추가되면 이벤트 발생
+            tagify.on('add', function () {
+               // console.log(tagify.value); // 입력된 태그 정보 객체
+            });
+         }
+      })
+      
+   </script>
+</head>
+
+<body>
+   <div id="wrap">
+
+      <!-- HEADER -->
+      <header class="header">
+         <div class="header-top">
+            <div class="header-top__inner">
+               <h1 class="header-top__logo">
+                  <a href="#">
+                     <img src="../../images/logo.svg" alt="">
+                  </a>
+               </h1>
+               <ul class="lnb">
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">LIVE</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">VIDEO BOOK</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link lnb__link--white" href="#">
+                        BRAND CORNER
+                        <i class="lnb__icon"></i>
+                     </a>
+                     <ul class="sublnb">
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">야너두, 시티즌 데이터사이언티스트</a>
+                        </li>
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">구해줘! SaaS</a>
+                        </li>
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">세미나 읽어주는 남자, 세미남</a>
+                        </li>
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">퀘스트 소프트웨어</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">PREMIUM SEMINAR</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">ONLINE SEMINAR</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">VOD</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">EVENT</a>
+                  </li>
+               </ul>
+               <ul class="header-login">
+                  <li class="header-login__item">
+                     <a id="searchBtn" class="header-login__link" href="#">
+                        <img class="header-login__search" src="../../images/icons/search-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="header-login__item">
+                     <a class="header-login__link" href="#">로그인</a>
+                  </li>
+                  <li class="header-login__item">
+                     <a class="header-login__link" href="#">회원가입</a>
+                  </li>
+                  <!-- 로그인 상태일때 -->
+                  <!-- <li class="header-login__item header-login__item--in">
+                     <a class="header-login__my" href="#">
+                        <img src="images/person03.png" alt="">
+                        <span>고우성</span>
+                     </a>
+                  </li> -->
+               </ul>
+               <div id="mobileMenu">
+                  <ul class="header-login">
+                     <li class="header-login__item">
+                        <a class="header-login__link" href="#">
+                           <img class="header-login__default" src="../../images/user-default.png" alt="">
+                           로그인
+                           <img class="header-login__move" src="../../images/icons/arrow-white-icon.png" alt="">
+                        </a>
+                     </li>
+                     <!-- 로그인 상태일때 -->
+                     <!-- <li class="header-login__item header-login__item--in">
+                        <a class="header-login__my" href="#">
+                           <img src="images/person03.png" alt="">
+                           <span>고우성</span>
+                           <img class="header-login__move" src="images/icons/arrow-white-icon.png" alt="">
+                        </a>
+                     </li> -->
+                     <li class="header-login__item">
+                        <button id="menuCloseBtn" type="button">
+                           <img src="../../images/icons/close-icon.png" alt="">
+                        </button>
+                     </li>
+                  </ul>
+                  <div id="searchPop">
+                     <div class="searchPop__inner">
+                        <form class="search" action="">
+                           <input class="search__input" type="text" placeholder="구해줘! SaaS와 관련된 자료를 검색해 보세요.">
+                           <button class="search__btn" type="submit">
+                              <img src="../../images/icons/search-icon.png" alt="">
+                           </button>
+                        </form>
+                     </div>
+                  </div>
+                  <ul class="lnb">
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">LIVE</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">VIDEO BOOK</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link lnb__link--white" href="#">
+                           BRAND CORNER
+                           <i class="lnb__icon"></i>
+                        </a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">PREMIUM SEMINAR</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">ONLINE SEMINAR</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">VOD</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">EVENT</a>
+                     </li>
+                  </ul>
+               </div>
+               <button id="menuBtn" type="button">
+                  <img src="../../images/icons/menu-icon.svg" alt="">
+               </button>
+            </div>
+         </div>
+         <div class="header-btm">
+            <div class="header-btm__inner">
+               <h2 class="header-btm__tit">
+                  <span>브랜드코너</span>
+                  <strong>구해줘! SaaS</strong>
+               </h2>
+               <nav class="header-btm__nav">
+                  <ul class="header-btm__list">
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">개요</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">웨비나</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">Q&A</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">자유게시판</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">VOD</a>
+                     </li>
+                  </ul>
+                  <button class="downbtn" type="button">
+                     <img src="../../images/icons/arrow-white-icon.png" alt="">
+                  </button>
+                  <button class="sbscr-btn" type="button">
+                     <span>구독하기</span>
+                  </button>
+                  <!-- 구독중일때 -->
+                  <!-- <button class="sbscr-btn sbscr-btn--check" type="button">
+                     <span>구독중</span>
+                     <img src="images/icons/check-icon.png" alt="">
+                  </button> -->
+               </nav>
+            </div>
+         </div>
+      </header>
+
+      <!-- PAGE -->
+      <main id="main">
+
+         <!-- SEARCH BOX -->
+         <section class="srchbx">
+            <div class="srchbx__inner">
+               <form class="srchbx__form" action="">
+                  <input class="srchbx__input" id="tag" name="basic" type="text" placeholder=", 관련 태그를 추가로 검색해 보세요">
+                  <button class="srchbx__btn" type="submit">
+                     <img src="../../images/icons/search-icon.png" alt="">
+                  </button>
+               </form>
+               <ul class="srchbx__list">
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">SaaS</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">Cloud</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">클라우드</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">Javascript</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">node.js</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">Saas</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">Cloud</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">클라우드</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">Javascript</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">node.js</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">클라우드</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link" href="#">Javascript</a>
+                  </li>
+                  <li class="srchbx__item">
+                     <a class="srchbx__link srchbx__link--gray" href="#">+6</a>
+                  </li>
+               </ul>
+            </div>
+         </section>
+
+         <!-- CONTENTS -->
+         <div class="contents">
+            <div class="contents__inner">
+               <section class="contents__left">
+
+                  <!-- Q&A -->
+                  <article class="qna qna--mgb60">
+                     <h3 class="title">
+                        <div class="title__block">
+                           <i class="title__icon"></i>
+                           <span class="title__txt">Q&A</span>
+                        </div>
+                        <a class="title__link" href="#">
+                           모두보기
+                           <img src="../../images/icons/move-icon.png" alt="">
+                        </a>
+                     </h3>
+
+                     <div class="qna-tag swiper">
+                        <ul id="list" class="qna-tag__list swiper-wrapper">
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link qna-tag__link--focused" href="#">전체</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#SaaS</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#Cloud</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#클라우드</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#Javascript</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#node.js</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#SaaS</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#Cloud</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#클라우드</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#Javascript</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#node.js</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#클라우드</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#Javascript</a>
+                           </li>
+                           <li class="qna-tag__item swiper-slide">
+                              <a class="qna-tag__link" href="#">#node.js</a>
+                           </li>
+                        </ul>
+                     </div>
+
+                     <div class="qna__con">
+                        <ul class="qna__list">
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는
+                                          것처럼 전통적인 관점 중에 하나인 죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도
+                                          동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는
+                                          것처럼 전통적인 관점 중에 하나인 죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도
+                                          동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                             <div class="qna__selection">
+                                                <img src="../../images/icons/mark-icon.png" alt="">
+                                                채택됨
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는
+                                          것처럼 전통적인 관점 중에 하나인 죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도
+                                          동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                             <div class="qna__selection">
+                                                <img src="../../images/icons/mark-icon.png" alt="">
+                                                채택됨
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는
+                                          것처럼 전통적인 관점 중에 하나인 죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도
+                                          동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </article>
+
+                  <!-- FREE BOARD -->
+                  <article class="free">
+                     <h3 class="title">
+                        <div class="title__block">
+                           <i class="title__icon"></i>
+                           <span class="title__txt">자유게시판</span>
+                        </div>
+                        <a class="title__link" href="#">
+                           모두보기
+                           <img src="../../images/icons/move-icon.png" alt="">
+                        </a>
+                     </h3>
+                     <ul class="free__list">
+                        <li class="free__item">
+                           <div class="free__div" href="#">
+                              <div class="tag">
+                                 <a class="tag__link" href="">Saas</a>
+                                 <a class="tag__link" href="">Cloud</a>
+                                 <a class="tag__link" href="">클라우드</a>
+                              </div>
+                              <a class="free__tit" href="#">SaaS 대치 방안과 생산성 향상을 위한 클라우드 스토리지 리뷰</a>
+                              <div class="free__info">
+                                 <span class="free__time">1시간 전</span>
+                                 <img class="free__img" src="../../images/person02.png" alt="">
+                              </div>
+                           </div>
+                        </li>
+                        <li class="free__item">
+                           <div class="free__div" href="#">
+                              <div class="tag">
+                                 <a class="tag__link" href="">Saas</a>
+                                 <a class="tag__link" href="">Cloud</a>
+                                 <a class="tag__link" href="">클라우드</a>
+                              </div>
+                              <a class="free__tit" href="#">SaaS 대치 방안과 생산성 향상을 위한 클라우드 스토리지 리뷰</a>
+                              <div class="free__info">
+                                 <span class="free__time">1시간 전</span>
+                                 <img class="free__img" src="../../images/person02.png" alt="">
+                              </div>
+                           </div>
+                        </li>
+                        <li class="free__item">
+                           <div class="free__div" href="#">
+                              <div class="tag">
+                                 <a class="tag__link" href="">Saas</a>
+                                 <a class="tag__link" href="">Cloud</a>
+                                 <a class="tag__link" href="">클라우드</a>
+                              </div>
+                              <a class="free__tit" href="#">SaaS 대치 방안과 생산성 향상을 위한 클라우드 스토리지 리뷰</a>
+                              <div class="free__info">
+                                 <span class="free__time">1시간 전</span>
+                                 <img class="free__img" src="../../images/person02.png" alt="">
+                              </div>
+                           </div>
+                        </li>
+                        <li class="free__item">
+                           <div class="free__div" href="#">
+                              <div class="tag">
+                                 <a class="tag__link" href="">Saas</a>
+                                 <a class="tag__link" href="">Cloud</a>
+                                 <a class="tag__link" href="">클라우드</a>
+                              </div>
+                              <a class="free__tit" href="#">SaaS 대치 방안과 생산성 향상을 위한 클라우드 스토리지 리뷰</a>
+                              <div class="free__info">
+                                 <span class="free__time">1시간 전</span>
+                                 <img class="free__img" src="../../images/person02.png" alt="">
+                              </div>
+                           </div>
+                        </li>
+                        <li class="free__item">
+                           <div class="free__div" href="#">
+                              <div class="tag">
+                                 <a class="tag__link" href="">Saas</a>
+                                 <a class="tag__link" href="">Cloud</a>
+                                 <a class="tag__link" href="">클라우드</a>
+                              </div>
+                              <a class="free__tit" href="#">SaaS 대치 방안과 생산성 향상을 위한 클라우드 스토리지 리뷰</a>
+                              <div class="free__info">
+                                 <span class="free__time">1시간 전</span>
+                                 <img class="free__img" src="../../images/person02.png" alt="">
+                              </div>
+                           </div>
+                        </li>
+                        <li class="free__item">
+                           <div class="free__div" href="#">
+                              <div class="tag">
+                                 <a class="tag__link" href="">Saas</a>
+                                 <a class="tag__link" href="">Cloud</a>
+                                 <a class="tag__link" href="">클라우드</a>
+                              </div>
+                              <a class="free__tit" href="#">SaaS 대치 방안과 생산성 향상을 위한 클라우드 스토리지 리뷰</a>
+                              <div class="free__info">
+                                 <span class="free__time">1시간 전</span>
+                                 <img class="free__img" src="../../images/person02.png" alt="">
+                              </div>
+                           </div>
+                        </li>
+                        <li class="free__item">
+                           <div class="free__div" href="#">
+                              <div class="tag">
+                                 <a class="tag__link" href="">Saas</a>
+                                 <a class="tag__link" href="">Cloud</a>
+                                 <a class="tag__link" href="">클라우드</a>
+                              </div>
+                              <a class="free__tit" href="#">SaaS 대치 방안과 생산성 향상을 위한 클라우드 스토리지 리뷰</a>
+                              <div class="free__info">
+                                 <span class="free__time">1시간 전</span>
+                                 <img class="free__img" src="../../images/person02.png" alt="">
+                              </div>
+                           </div>
+                        </li>
+                        <li class="free__item">
+                           <div class="free__div" href="#">
+                              <div class="tag">
+                                 <a class="tag__link" href="">Saas</a>
+                                 <a class="tag__link" href="">Cloud</a>
+                                 <a class="tag__link" href="">클라우드</a>
+                              </div>
+                              <a class="free__tit" href="#">SaaS 대치 방안과 생산성 향상을 위한 클라우드 스토리지 리뷰</a>
+                              <div class="free__info">
+                                 <span class="free__time">1시간 전</span>
+                                 <img class="free__img" src="../../images/person02.png" alt="">
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </article>
+
+                  <!-- VOD -->
+                  <article class="vod">
+                     <h3 class="title">
+                        <div class="title__block">
+                           <i class="title__icon"></i>
+                           <span class="title__txt">최신 VOD</span>
+                        </div>
+                        <a class="title__link" href="#">
+                           모두보기
+                           <img src="../../images/icons/move-icon.png" alt="">
+                        </a>
+                     </h3>
+                     <ul class="vod__list">
+                        <li class="vod__item">
+                           <div class="vod__top">
+                              <img class="vod__thum" src="../../images/schedule01.png" alt="">
+                              <span class="vod__time">1:30:05</span>
+                              <div class="plyls">
+                                 <ul class="plyls__list">
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-1] 인트로</span>
+                                          <span>0:00</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <a class="vod__tit" href="#">데이터 분석 플랫폼 빠르고, 쉽고, 똑똑하게 사용하기</a>
+                           <div class="tag">
+                              <a class="tag__link" href="#">Saas</a>
+                              <a class="tag__link" href="#">Cloud</a>
+                              <a class="tag__link" href="#">클라우드</a>
+                           </div>
+                        </li>
+                        <li class="vod__item">
+                           <div class="vod__top">
+                              <img class="vod__thum" src="../../images/schedule02.png" alt="">
+                              <span class="vod__time">1:30:05</span>
+                              <div class="plyls">
+                                 <ul class="plyls__list">
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-1] 인트로</span>
+                                          <span>0:00</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <a class="vod__tit" href="#">디지털 전환 시대의 디지털 트윈 비즈니스</a>
+                           <div class="tag">
+                              <a class="tag__link" href="#">Saas</a>
+                              <a class="tag__link" href="#">Cloud</a>
+                              <a class="tag__link" href="#">클라우드</a>
+                           </div>
+                        </li>
+                        <li class="vod__item">
+                           <div class="vod__top">
+                              <img class="vod__thum" src="../../images/schedule01.png" alt="">
+                              <span class="vod__time">1:30:05</span>
+                              <div class="plyls">
+                                 <ul class="plyls__list">
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-1] 인트로</span>
+                                          <span>0:00</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <a class="vod__tit" href="#">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</a>
+                           <div class="tag">
+                              <a class="tag__link" href="#">Saas</a>
+                              <a class="tag__link" href="#">Cloud</a>
+                              <a class="tag__link" href="#">클라우드</a>
+                           </div>
+                        </li>
+                        <li class="vod__item">
+                           <div class="vod__top">
+                              <img class="vod__thum" src="../../images/schedule02.png" alt="">
+                              <span class="vod__time">1:30:05</span>
+                              <div class="plyls">
+                                 <ul class="plyls__list">
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-1] 인트로</span>
+                                          <span>0:00</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <a class="vod__tit" href="#">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</a>
+                           <div class="tag">
+                              <a class="tag__link" href="#">Saas</a>
+                              <a class="tag__link" href="#">Cloud</a>
+                              <a class="tag__link" href="#">클라우드</a>
+                           </div>
+                        </li>
+                        <li class="vod__item">
+                           <div class="vod__top">
+                              <img class="vod__thum" src="../../images/schedule02.png" alt="">
+                              <span class="vod__time">1:30:05</span>
+                              <div class="plyls">
+                                 <ul class="plyls__list">
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-1] 인트로</span>
+                                          <span>0:00</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <a class="vod__tit" href="#">디지털 전환 시대의 디지털 트윈 비즈니스</a>
+                           <div class="tag">
+                              <a class="tag__link" href="#">Saas</a>
+                              <a class="tag__link" href="#">Cloud</a>
+                              <a class="tag__link" href="#">클라우드</a>
+                           </div>
+                        </li>
+                        <li class="vod__item">
+                           <div class="vod__top">
+                              <img class="vod__thum" src="../../images/schedule01.png" alt="">
+                              <span class="vod__time">1:30:05</span>
+                              <div class="plyls">
+                                 <ul class="plyls__list">
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-1] 인트로</span>
+                                          <span>0:00</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <a class="vod__tit" href="#">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</a>
+                           <div class="tag">
+                              <a class="tag__link" href="#">Saas</a>
+                              <a class="tag__link" href="#">Cloud</a>
+                              <a class="tag__link" href="#">클라우드</a>
+                           </div>
+                        </li>
+                        <li class="vod__item">
+                           <div class="vod__top">
+                              <img class="vod__thum" src="../../images/schedule02.png" alt="">
+                              <span class="vod__time">1:30:05</span>
+                              <div class="plyls">
+                                 <ul class="plyls__list">
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-1] 인트로</span>
+                                          <span>0:00</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <a class="vod__tit" href="#">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</a>
+                           <div class="tag">
+                              <a class="tag__link" href="#">Saas</a>
+                              <a class="tag__link" href="#">Cloud</a>
+                              <a class="tag__link" href="#">클라우드</a>
+                           </div>
+                        </li>
+                        <li class="vod__item">
+                           <div class="vod__top">
+                              <img class="vod__thum" src="../../images/schedule01.png" alt="">
+                              <span class="vod__time">1:30:05</span>
+                              <div class="plyls">
+                                 <ul class="plyls__list">
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-1] 인트로</span>
+                                          <span>0:00</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-2] 두번째 내용</span>
+                                          <span>0:24</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[1-3] 세번째 내용</span>
+                                          <span>3:56</span>
+                                       </a>
+                                    </li>
+                                    <li class="plyls__item">
+                                       <a class="plyls__link" href="#">
+                                          <span>[2-1] 인트로</span>
+                                          <span>9:12</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <a class="vod__tit" href="#">데이터 분석 플랫폼 빠르고, 쉽고, 똑똑하게 사용하기</a>
+                           <div class="tag">
+                              <a class="tag__link" href="#">Saas</a>
+                              <a class="tag__link" href="#">Cloud</a>
+                              <a class="tag__link" href="#">클라우드</a>
+                           </div>
+                        </li>
+                     </ul>
+                  </article>
+               </section>
+
+               <!-- ASIDE -->
+               <aside class="aside">
+
+                  <!-- TAG TOP 20 -->
+                  <article class="tagtop">
+                     <h3 class="title">
+                        <div class="title__block">
+                           <i class="title__icon"></i>
+                           <span class="title__txt">태그 TOP 20</span>
+                        </div>
+                     </h3>
+                     <ul class="tagtop__list">
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">SaaS</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Cloud</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">클라우드</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Javascript</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">node.js</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">SaaS</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Cloud</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">클라우드</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Javascript</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">node.js</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">SaaS</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Cloud</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">클라우드</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Javascript</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">node.js</a>
+                        </li>
+                     </ul>
+                     <div class="morebox">
+                        <a class="more" href="#">
+                           더보기
+                           <img src="../../images/icons/select-icon.png" alt="">
+                        </a>
+                     </div>
+                  </article>
+
+                  <!-- 사이드 웨비나 일정 -->
+                  <article class="wbnr">
+                     <h3 class="title">
+                        <div class="title__block">
+                           <i class="title__icon"></i>
+                           <span class="title__txt">웨비나 일정</span>
+                        </div>
+                     </h3>
+                     <div class="wbnr__cal">
+                        <select class="wbnr__select" name="" id="">
+                           <option value="2023">2023</option>
+                           <option value="2022">2022</option>
+                           <option value="2021">2021</option>
+                        </select>
+                        <div class="wbnr__scroll swiper">
+                           <ul class="wbnr__list swiper-wrapper">
+                              <li class="wbnr__item wbnr__item--focused swiper-slide">All</li>
+                              <li class="wbnr__item swiper-slide">Jan</li>
+                              <li class="wbnr__item swiper-slide">Feb</li>
+                              <li class="wbnr__item swiper-slide">Mar</li>
+                              <li class="wbnr__item swiper-slide">Apr</li>
+                              <li class="wbnr__item swiper-slide">May</li>
+                              <li class="wbnr__item swiper-slide">Jun</li>
+                              <li class="wbnr__item swiper-slide">Jul</li>
+                              <li class="wbnr__item swiper-slide">Aug</li>
+                              <li class="wbnr__item swiper-slide">Sep</li>
+                              <li class="wbnr__item swiper-slide">Act</li>
+                              <li class="wbnr__item swiper-slide">Nov</li>
+                              <li class="wbnr__item swiper-slide">Dec</li>
+                           </ul>
+                        </div>
+                     </div>
+
+                     <div class="wbnr__slide">
+                        <div class="wbnr-con">
+                           <ul class="wbnr-con__list">
+                              <li class="wbnr-con__item">
+                                 <a class="wbnr-con__link" href="#">
+                                    <p class="wbnr-con__date">
+                                       <span>1월 24일</span>
+                                       <span class="wbnr-con__dday wbnr-con__dday--red">D-1</span>
+                                    </p>
+                                    <figure class="wbnr-con__fig">
+                                       <figcaption class="wbnr-con__cap">
+                                          <h4 class="wbnr-con__tit">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</h4>
+                                          <span class="wbnr-con__time">오후 4시 ~ 오후 5시</span>
+                                          <span class="wbnr-con__hash">#Saas #Cloud #클라우드</span>
+                                       </figcaption>
+                                       <img class="wbnr-con__img" src="../../images/schedule01.png" alt="">
+                                    </figure>
+                                 </a>
+                              </li>
+                              <li class="wbnr-con__item">
+                                 <a class="wbnr-con__link" href="#">
+                                    <p class="wbnr-con__date">
+                                       <span>1월 24일</span>
+                                       <span class="wbnr-con__dday">D-2</span>
+                                    </p>
+                                    <figure class="wbnr-con__fig">
+                                       <figcaption class="wbnr-con__cap">
+                                          <h4 class="wbnr-con__tit">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</h4>
+                                          <span class="wbnr-con__time">오후 4시 ~ 오후 5시</span>
+                                          <span class="wbnr-con__hash">#Saas #Cloud #클라우드</span>
+                                       </figcaption>
+                                       <img class="wbnr-con__img" src="../../images/schedule01.png" alt="">
+                                    </figure>
+                                 </a>
+                              </li>
+                              <li class="wbnr-con__item">
+                                 <a class="wbnr-con__link" href="#">
+                                    <p class="wbnr-con__date">
+                                       <span>1월 24일</span>
+                                       <span class="wbnr-con__dday">D-2</span>
+                                    </p>
+                                    <figure class="wbnr-con__fig">
+                                       <figcaption class="wbnr-con__cap">
+                                          <h4 class="wbnr-con__tit">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</h4>
+                                          <span class="wbnr-con__time">오후 4시 ~ 오후 5시</span>
+                                          <span class="wbnr-con__hash">#Saas #Cloud #클라우드</span>
+                                       </figcaption>
+                                       <img class="wbnr-con__img" src="../../images/schedule01.png" alt="">
+                                    </figure>
+                                 </a>
+                              </li>
+                              <li class="wbnr-con__item">
+                                 <a class="wbnr-con__link" href="#">
+                                    <p class="wbnr-con__date">
+                                       <span>1월 24일</span>
+                                       <span class="wbnr-con__dday">D-2</span>
+                                    </p>
+                                    <figure class="wbnr-con__fig">
+                                       <figcaption class="wbnr-con__cap">
+                                          <h4 class="wbnr-con__tit">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</h4>
+                                          <span class="wbnr-con__time">오후 4시 ~ 오후 5시</span>
+                                          <span class="wbnr-con__hash">#Saas #Cloud #클라우드</span>
+                                       </figcaption>
+                                       <img class="wbnr-con__img" src="../../images/schedule01.png" alt="">
+                                    </figure>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+
+                     </div>
+                  </article>
+                  
+               </aside>
+            </div>
+         </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+         <div class="footer__inner">
+            <div class="footer__top">
+               <h2 class="footer__logo">
+                  <a class="footer__logo-link" href="#">
+                     <img src="../../images/logo-white.svg" alt="">
+                  </a>
+               </h2>
+               <ul class="sns">
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/rss-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/facebook-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/blog-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/youtube-icon.png" alt="">
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer__btm">
+               <p class="footer__copy">Copyright © 토크아이티(주) All Rights Reserved.</p>
+               <ul class="footer__list">
+                  <li class="footer__item">
+                     <a class="footer__link" href="#">문의 및 약도</a>
+                  </li>
+                  <li class="footer__item">
+                     <a class="footer__link" href="#">이용약관</a>
+                  </li>
+                  <li class="footer__item">
+                     <a class="footer__link" href="#">개인정보 취급방침</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+   </div>
+</body>
+
+</html>
