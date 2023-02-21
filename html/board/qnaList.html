@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Talk IT</title>
+   <link rel="stylesheet" href="../../css/common.css">
+   <link rel="stylesheet" href="../../css/page.css">
+   <script src="../../js/lib/jquery/jquery-3.6.0.min.js"></script>
+   <link rel="stylesheet" href="../../js/lib/swiper/swiper-bundle.min.css" />
+   <script src="../../js/lib/swiper/swiper-bundle.min.js"></script>
+   <script src="../../js/pub.js"></script>
+</head>
+
+<body>
+   <div id="wrap">
+
+      <!-- HEADER -->
+      <header class="header">
+         <div class="header-top">
+            <div class="header-top__inner">
+               <h1 class="header-top__logo">
+                  <a href="#">
+                     <img src="../../images/logo.svg" alt="">
+                  </a>
+               </h1>
+               <ul class="lnb">
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">LIVE</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">VIDEO BOOK</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link lnb__link--white" href="#">
+                        BRAND CORNER
+                        <i class="lnb__icon"></i>
+                     </a>
+                     <ul class="sublnb">
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">야너두, 시티즌 데이터사이언티스트</a>
+                        </li>
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">구해줘! SaaS</a>
+                        </li>
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">세미나 읽어주는 남자, 세미남</a>
+                        </li>
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">퀘스트 소프트웨어</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">PREMIUM SEMINAR</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">ONLINE SEMINAR</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">VOD</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">EVENT</a>
+                  </li>
+               </ul>
+               <ul class="header-login">
+                  <li class="header-login__item">
+                     <a id="searchBtn" class="header-login__link" href="#">
+                        <img class="header-login__search" src="../../images/icons/search-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="header-login__item">
+                     <a class="header-login__link" href="#">로그인</a>
+                  </li>
+                  <li class="header-login__item">
+                     <a class="header-login__link" href="#">회원가입</a>
+                  </li>
+                  <!-- 로그인 상태일때 -->
+                  <!-- <li class="header-login__item header-login__item--in">
+                     <a class="header-login__my" href="#">
+                        <img src="images/person03.png" alt="">
+                        <span>고우성</span>
+                     </a>
+                  </li> -->
+               </ul>
+               <div id="mobileMenu">
+                  <ul class="header-login">
+                     <li class="header-login__item">
+                        <a class="header-login__link" href="#">
+                           <img class="header-login__default" src="../../images/user-default.png" alt="">
+                           로그인
+                           <img class="header-login__move" src="../../images/icons/arrow-white-icon.png" alt="">
+                        </a>
+                     </li>
+                     <!-- 로그인 상태일때 -->
+                     <!-- <li class="header-login__item header-login__item--in">
+                        <a class="header-login__my" href="#">
+                           <img src="images/person03.png" alt="">
+                           <span>고우성</span>
+                           <img class="header-login__move" src="images/icons/arrow-white-icon.png" alt="">
+                        </a>
+                     </li> -->
+                     <li class="header-login__item">
+                        <button id="menuCloseBtn" type="button">
+                           <img src="../../images/icons/close-icon.png" alt="">
+                        </button>
+                     </li>
+                  </ul>
+                  <div id="searchPop">
+                     <div class="searchPop__inner">
+                        <form class="search" action="">
+                           <input class="search__input" type="text" placeholder="구해줘! SaaS와 관련된 자료를 검색해 보세요.">
+                           <button class="search__btn" type="submit">
+                              <img src="../../images/icons/search-icon.png" alt="">
+                           </button>
+                        </form>
+                     </div>
+                  </div>
+                  <ul class="lnb">
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">LIVE</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">VIDEO BOOK</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link lnb__link--white" href="#">
+                           BRAND CORNER
+                           <i class="lnb__icon"></i>
+                        </a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">PREMIUM SEMINAR</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">ONLINE SEMINAR</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">VOD</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">EVENT</a>
+                     </li>
+                  </ul>
+               </div>
+               <button id="menuBtn" type="button">
+                  <img src="../../images/icons/menu-icon.svg" alt="">
+               </button>
+            </div>
+         </div>
+         <div class="header-btm">
+            <div class="header-btm__inner">
+               <h2 class="header-btm__tit">
+                  <span>브랜드코너</span>
+                  <strong>구해줘! SaaS</strong>
+               </h2>
+               <nav class="header-btm__nav">
+                  <ul class="header-btm__list">
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">개요</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">웨비나</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">Q&A</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">자유게시판</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">VOD</a>
+                     </li>
+                  </ul>
+                  <button class="downbtn" type="button">
+                     <img src="../../images/icons/arrow-white-icon.png" alt="">
+                  </button>
+                  <button class="sbscr-btn" type="button">
+                     <span>구독하기</span>
+                     <img src="../../images/icons/check-icon.png" alt="">
+                  </button>
+                  <!-- 구독중일때 -->
+                  <!-- <button class="sbscr-btn sbscr-btn--check" type="button">
+                     <span>구독중</span>
+                     <img src="images/icons/check-icon.png" alt="">
+                  </button> -->
+               </nav>
+            </div>
+         </div>
+      </header>
+
+      <!-- PAGE -->
+      <main id="main">
+
+         <!-- Q&A MAIN -->
+         <section class="qnama">
+            <div class="qnama__inner">
+               <h2 class="qnama__title">
+                  <strong>Q&A</strong>
+                  <a href="#">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M12.6665 0.666504C11.9792 0.666504 11.2138 0.985171 10.7658 1.4325L4.6665 7.53317L3.33317 12.6665L8.46651 11.3332L14.5658 5.23317C15.0245 4.7745 15.3332 4.0625 15.3332 3.33317C15.3332 1.8605 14.1392 0.666504 12.6665 0.666504ZM10.9085 3.17584L11.3998 3.6665L6.99984 8.06651L6.50917 7.57584L10.9085 3.17584ZM5.19384 10.8058L5.74584 8.67984L7.31984 10.2538L5.19384 10.8058ZM8.42384 9.48984L7.93317 8.99984L12.3332 4.59984L12.8232 5.08984L8.42384 9.48984ZM13.7418 4.14184L11.8598 2.25984C12.0705 2.1205 12.3845 1.99984 12.6665 1.99984C13.4018 1.99984 13.9998 2.59784 13.9998 3.33317C13.9998 3.64784 13.8825 3.93917 13.7418 4.14184ZM12.6665 13.9998H1.99984V3.33317H6.9805L8.31384 1.99984H0.666504V15.3332H13.9998V7.68451L12.6665 9.01784V13.9998Z"
+                           fill="black" />
+                     </svg>
+                     질문하기
+                  </a>
+               </h2>
+               <h3 class="title">
+                  <div class="title__block">
+                     <i class="title__icon"></i>
+                     <span class="title__txt title__txt--white">실시간 인기 질문</span>
+                  </div>
+               </h3>
+               <div class="qnama__scroll swiper">
+                  <ul class="qnama__list swiper-wrapper">
+                     <li class="qnama__item swiper-slide">
+                        <div class="qnama__div">
+                           <div class="qnama__tit">
+                              <i class="qnama__icon">Q</i>
+                              <a class="qnama__link" href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                           </div>
+                           <div class="qnama__line">
+                              <span></span>
+                           </div>
+                           <div class="qnama__answer">
+                              <i class="qnama__icon2">A</i>
+                              <div class="qnama__txtbox">
+                                 <a class="qnama__txt" href="#">
+                                    ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인 죽으면 절대
+                                    안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                 </a>
+                                 <div class="tag">
+                                    <a class="tag__link tag__link--gray" href="#">Saas</a>
+                                    <a class="tag__link tag__link--gray" href="#">Cloud</a>
+                                    <a class="tag__link tag__link--gray" href="#">클라우드</a>
+                                 </div>
+                                 <div class="qnama__info">
+                                    <div class="qnama__data">
+                                       <span class="qnama__count">
+                                          <img src="../../images/icons/like-white-icon.png" alt="">
+                                          6
+                                       </span>
+                                       <span class="qnama__count">
+                                          <img src="../../images/icons/reply-white-icon.png" alt="">
+                                          6
+                                       </span>
+                                       <span class="qnama__time">1시간 전</span>
+                                    </div>
+                                    <div class="qnama__people">
+                                       <div class="qnama__group">
+                                          <img src="../../images/person01.png" alt="">
+                                          <img src="../../images/person02.png" alt="">
+                                       </div>
+                                       <div class="qnama__selection">
+                                          <img src="../../images/icons/mark-icon.png" alt="">
+                                          채택됨
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="qnama__item swiper-slide">
+                        <div class="qnama__div">
+                           <div class="qnama__tit">
+                              <i class="qnama__icon">Q</i>
+                              <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                           </div>
+                           <div class="qnama__line">
+                              <span></span>
+                           </div>
+                           <div class="qnama__answer">
+                              <i class="qnama__icon2">A</i>
+                              <div class="qnama__txtbox">
+                                 <a class="qnama__txt" href="#">
+                                    ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인 죽으면 절대
+                                    안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                 </a>
+                                 <div class="tag">
+                                    <a class="tag__link tag__link--gray" href="#">Saas</a>
+                                    <a class="tag__link tag__link--gray" href="#">Cloud</a>
+                                    <a class="tag__link tag__link--gray" href="#">클라우드</a>
+                                 </div>
+                                 <div class="qnama__info">
+                                    <div class="qnama__data">
+                                       <span class="qnama__count">
+                                          <img src="../../images/icons/like-white-icon.png" alt="">
+                                          6
+                                       </span>
+                                       <span class="qnama__count">
+                                          <img src="../../images/icons/reply-white-icon.png" alt="">
+                                          6
+                                       </span>
+                                       <span class="qnama__time">1시간 전</span>
+                                    </div>
+                                    <div class="qnama__people">
+                                       <div class="qnama__group">
+                                          <img src="../../images/person01.png" alt="">
+                                          <img src="../../images/person02.png" alt="">
+                                       </div>
+                                       <div class="qnama__selection">
+                                          <img src="../../images/icons/mark-icon.png" alt="">
+                                          채택됨
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="qnama__item swiper-slide">
+                        <div class="qnama__div">
+                           <div class="qnama__tit">
+                              <i class="qnama__icon">Q</i>
+                              <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                           </div>
+                           <div class="qnama__line">
+                              <span></span>
+                           </div>
+                           <div class="qnama__answer">
+                              <i class="qnama__icon2">A</i>
+                              <div class="qnama__txtbox">
+                                 <a class="qnama__txt" href="#">
+                                    ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인 죽으면 절대
+                                    안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                 </a>
+                                 <div class="tag">
+                                    <a class="tag__link tag__link--gray" href="#">Saas</a>
+                                    <a class="tag__link tag__link--gray" href="#">Cloud</a>
+                                    <a class="tag__link tag__link--gray" href="#">클라우드</a>
+                                 </div>
+                                 <div class="qnama__info">
+                                    <div class="qnama__data">
+                                       <span class="qnama__count">
+                                          <img src="../../images/icons/like-white-icon.png" alt="">
+                                          6
+                                       </span>
+                                       <span class="qnama__count">
+                                          <img src="../../images/icons/reply-white-icon.png" alt="">
+                                          6
+                                       </span>
+                                       <span class="qnama__time">1시간 전</span>
+                                    </div>
+                                    <div class="qnama__people">
+                                       <div class="qnama__group">
+                                          <img src="../../images/person01.png" alt="">
+                                          <img src="../../images/person02.png" alt="">
+                                       </div>
+                                       <div class="qnama__selection">
+                                          <img src="../../images/icons/mark-icon.png" alt="">
+                                          채택됨
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+
+         <!-- CONTENTS -->
+         <div class="contents">
+            <div class="contents__inner">
+               <section class="contents__left">
+
+                  <!-- Q&A LIST -->
+                  <article class="qna">
+                     
+                     <div class="qnama__selbox">
+                        <div class="qna-tag swiper">
+                           <ul id="list" class="qna-tag__list swiper-wrapper">
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link qna-tag__link--focused" href="#">전체</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#SaaS</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Cloud</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#클라우드</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Javascript</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#node.js</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#SaaS</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Cloud</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#클라우드</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Javascript</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#node.js</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#클라우드</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Javascript</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#node.js</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <select class="qnama__select" name="" id="">
+                           <option value="">최신순</option>
+                        </select>
+                     </div>
+                  
+                     <div class="qna__con">
+                        <ul class="qna__list">
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                             <div class="qna__selection">
+                                                <img src="../../images/icons/mark-icon.png" alt="">
+                                                채택됨
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                             <div class="qna__selection">
+                                                <img src="../../images/icons/mark-icon.png" alt="">
+                                                채택됨
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                             <div class="qna__selection">
+                                                <img src="../../images/icons/mark-icon.png" alt="">
+                                                채택됨
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                             <div class="qna__selection">
+                                                <img src="../../images/icons/mark-icon.png" alt="">
+                                                채택됨
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                             <div class="qna__selection">
+                                                <img src="../../images/icons/mark-icon.png" alt="">
+                                                채택됨
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                                <img src="../../images/person02.png" alt="">
+                                             </div>
+                                             <div class="qna__selection">
+                                                <img src="../../images/icons/mark-icon.png" alt="">
+                                                채택됨
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="qna__item">
+                              <div class="qna__div">
+                                 <div class="qna__tit">
+                                    <i class="qna__icon">Q</i>
+                                    <a href="#">일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</a>
+                                 </div>
+                                 <div class="qna__line">
+                                    <span></span>
+                                 </div>
+                                 <div class="qna__answer">
+                                    <i class="qna__icon2">A</i>
+                                    <div class="qna__txtbox">
+                                       <a class="qna__txt" href="#">
+                                          ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인
+                                          죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.
+                                       </a>
+                                       <div class="tag">
+                                          <a class="tag__link" href="#">Saas</a>
+                                          <a class="tag__link" href="#">Cloud</a>
+                                          <a class="tag__link" href="#">클라우드</a>
+                                       </div>
+                                       <div class="qna__info">
+                                          <div class="qna__data">
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/like-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__count">
+                                                <img src="../../images/icons/reply-icon.png" alt="">
+                                                6
+                                             </span>
+                                             <span class="qna__time">1시간 전</span>
+                                          </div>
+                                          <div class="qna__people">
+                                             <div class="qna__group">
+                                                <img src="../../images/person01.png" alt="">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+
+                     <div class="qnama__btm">
+                        <div class="qnabbx">
+                           <a class="qnabbx__btn" href="#">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M12.6665 0.666504C11.9792 0.666504 11.2138 0.985171 10.7658 1.4325L4.6665 7.53317L3.33317 12.6665L8.46651 11.3332L14.5658 5.23317C15.0245 4.7745 15.3332 4.0625 15.3332 3.33317C15.3332 1.8605 14.1392 0.666504 12.6665 0.666504ZM10.9085 3.17584L11.3998 3.6665L6.99984 8.06651L6.50917 7.57584L10.9085 3.17584ZM5.19384 10.8058L5.74584 8.67984L7.31984 10.2538L5.19384 10.8058ZM8.42384 9.48984L7.93317 8.99984L12.3332 4.59984L12.8232 5.08984L8.42384 9.48984ZM13.7418 4.14184L11.8598 2.25984C12.0705 2.1205 12.3845 1.99984 12.6665 1.99984C13.4018 1.99984 13.9998 2.59784 13.9998 3.33317C13.9998 3.64784 13.8825 3.93917 13.7418 4.14184ZM12.6665 13.9998H1.99984V3.33317H6.9805L8.31384 1.99984H0.666504V15.3332H13.9998V7.68451L12.6665 9.01784V13.9998Z"
+                                    fill="white" />
+                              </svg>
+                              질문하기
+                           </a>
+                        </div>
+
+                        <div class="paging">
+                           <ul class="paging__list">
+                              <li class="paging__item">
+                                 <a class="paging__prev paging__disable" href="#">
+                                    <img src="../../images/icons/paging-icon.png" alt="">
+                                 </a>
+                              </li>
+                              <li class="paging__item">
+                                 <p class="paging__focus">1</p>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__link" href="#">2</a>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__link" href="#">3</a>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__link" href="#">4</a>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__link" href="#">5</a>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__next" href="#">
+                                    <img src="../../images/icons/paging-icon.png" alt="">
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </article>
+               </section>
+
+               <!-- ASIDE -->
+               <aside class="aside">
+
+                  <!-- TAG TOP 20 -->
+                  <article class="tagtop">
+                     <h3 class="title">
+                        <div class="title__block">
+                           <i class="title__icon"></i>
+                           <span class="title__txt">태그 TOP 20</span>
+                        </div>
+                     </h3>
+                     <ul class="tagtop__list">
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">SaaS</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Cloud</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">클라우드</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Javascript</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">node.js</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">SaaS</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Cloud</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">클라우드</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Javascript</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">node.js</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">SaaS</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Cloud</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">클라우드</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">Javascript</a>
+                        </li>
+                        <li class="tagtop__item">
+                           <a class="tagtop__link" href="#">node.js</a>
+                        </li>
+                     </ul>
+                     <div class="morebox">
+                        <a id="tagTopMoreBtn" class="more" href="#">
+                           더보기
+                           <img src="../../images/icons/select-icon.png" alt="">
+                        </a>
+                     </div>
+                  </article>
+
+                  <!-- 사이드 웨비나 일정 -->
+                  <article class="wbnr">
+                     <h3 class="title">
+                        <div class="title__block">
+                           <i class="title__icon"></i>
+                           <span class="title__txt">웨비나 일정</span>
+                        </div>
+                     </h3>
+                     <div class="wbnr__cal">
+                        <select class="wbnr__select" name="" id="">
+                           <option value="2023">2023</option>
+                           <option value="2022">2022</option>
+                           <option value="2021">2021</option>
+                        </select>
+                        <div class="wbnr__scroll swiper">
+                           <ul class="wbnr__list swiper-wrapper">
+                              <li class="wbnr__item wbnr__item--focused swiper-slide">All</li>
+                              <li class="wbnr__item swiper-slide">Jan</li>
+                              <li class="wbnr__item swiper-slide">Feb</li>
+                              <li class="wbnr__item swiper-slide">Mar</li>
+                              <li class="wbnr__item swiper-slide">Apr</li>
+                              <li class="wbnr__item swiper-slide">May</li>
+                              <li class="wbnr__item swiper-slide">Jun</li>
+                              <li class="wbnr__item swiper-slide">Jul</li>
+                              <li class="wbnr__item swiper-slide">Aug</li>
+                              <li class="wbnr__item swiper-slide">Sep</li>
+                              <li class="wbnr__item swiper-slide">Act</li>
+                              <li class="wbnr__item swiper-slide">Nov</li>
+                              <li class="wbnr__item swiper-slide">Dec</li>
+                           </ul>
+                        </div>
+                     </div>
+
+                     <div class="wbnr__slide">
+                        <div class="wbnr-con">
+                           <ul class="wbnr-con__list">
+                              <li class="wbnr-con__item">
+                                 <a class="wbnr-con__link" href="#">
+                                    <p class="wbnr-con__date">
+                                       <span>1월 24일</span>
+                                       <span class="wbnr-con__dday wbnr-con__dday--red">D-1</span>
+                                    </p>
+                                    <figure class="wbnr-con__fig">
+                                       <figcaption class="wbnr-con__cap">
+                                          <h4 class="wbnr-con__tit">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</h4>
+                                          <span class="wbnr-con__time">오후 4시 ~ 오후 5시</span>
+                                          <span class="wbnr-con__hash">#Saas #Cloud #클라우드</span>
+                                       </figcaption>
+                                       <img class="wbnr-con__img" src="../../images/schedule01.png" alt="">
+                                    </figure>
+                                 </a>
+                              </li>
+                              <li class="wbnr-con__item">
+                                 <a class="wbnr-con__link" href="#">
+                                    <p class="wbnr-con__date">
+                                       <span>1월 24일</span>
+                                       <span class="wbnr-con__dday">D-2</span>
+                                    </p>
+                                    <figure class="wbnr-con__fig">
+                                       <figcaption class="wbnr-con__cap">
+                                          <h4 class="wbnr-con__tit">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</h4>
+                                          <span class="wbnr-con__time">오후 4시 ~ 오후 5시</span>
+                                          <span class="wbnr-con__hash">#Saas #Cloud #클라우드</span>
+                                       </figcaption>
+                                       <img class="wbnr-con__img" src="../../images/schedule01.png" alt="">
+                                    </figure>
+                                 </a>
+                              </li>
+                              <li class="wbnr-con__item">
+                                 <a class="wbnr-con__link" href="#">
+                                    <p class="wbnr-con__date">
+                                       <span>1월 24일</span>
+                                       <span class="wbnr-con__dday">D-2</span>
+                                    </p>
+                                    <figure class="wbnr-con__fig">
+                                       <figcaption class="wbnr-con__cap">
+                                          <h4 class="wbnr-con__tit">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</h4>
+                                          <span class="wbnr-con__time">오후 4시 ~ 오후 5시</span>
+                                          <span class="wbnr-con__hash">#Saas #Cloud #클라우드</span>
+                                       </figcaption>
+                                       <img class="wbnr-con__img" src="../../images/schedule01.png" alt="">
+                                    </figure>
+                                 </a>
+                              </li>
+                              <li class="wbnr-con__item">
+                                 <a class="wbnr-con__link" href="#">
+                                    <p class="wbnr-con__date">
+                                       <span>1월 24일</span>
+                                       <span class="wbnr-con__dday">D-2</span>
+                                    </p>
+                                    <figure class="wbnr-con__fig">
+                                       <figcaption class="wbnr-con__cap">
+                                          <h4 class="wbnr-con__tit">하이브리드 클라우드 시대의 데이터 보호 및 재해복구 방안</h4>
+                                          <span class="wbnr-con__time">오후 4시 ~ 오후 5시</span>
+                                          <span class="wbnr-con__hash">#Saas #Cloud #클라우드</span>
+                                       </figcaption>
+                                       <img class="wbnr-con__img" src="../../images/schedule01.png" alt="">
+                                    </figure>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+
+                     </div>
+                  </article>
+
+               </aside>
+            </div>
+         </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+         <div class="footer__inner">
+            <div class="footer__top">
+               <h2 class="footer__logo">
+                  <a class="footer__logo-link" href="#">
+                     <img src="../../images/logo-white.svg" alt="">
+                  </a>
+               </h2>
+               <ul class="sns">
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/rss-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/facebook-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/blog-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/youtube-icon.png" alt="">
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer__btm">
+               <p class="footer__copy">Copyright © 토크아이티(주) All Rights Reserved.</p>
+               <ul class="footer__list">
+                  <li class="footer__item">
+                     <a class="footer__link" href="#">문의 및 약도</a>
+                  </li>
+                  <li class="footer__item">
+                     <a class="footer__link" href="#">이용약관</a>
+                  </li>
+                  <li class="footer__item">
+                     <a class="footer__link" href="#">개인정보 취급방침</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+   </div>
+</body>
+
+</html>

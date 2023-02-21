@@ -6,10 +6,10 @@ $(function () {
       $(this).find('img').stop().toggle();
       if($(this).hasClass('sbscr-btn--check')) {
          $(this).find('span').text('구독중');
-         $(this).append('<img src="images/icons/check-icon.png" alt="">');
+         $(this).find('img').stop().fadeIn();
       } else {
          $(this).find('span').text('구독하기');
-         $(this).find('img').remove();
+         $(this).find('img').stop().fadeOut();
       }
    });
 
@@ -134,6 +134,25 @@ $(function () {
       }
    });
 
+   // 태그 TOP 20 더보기버튼
+   var tagArr = [{ href: "#", text: "SaaS" }, { href: "#", text: "Cloud" }, { href: "#", text: "클라우드" }, { href: "#", text: "Javascript" }, { href: "#", text: "node.js" }];
+
+   $('#tagTopMoreBtn').click(function (e) {
+      e.preventDefault();
+      var html = '';
+      for (var i = 0; i < tagArr.length; i++) {
+         html += '<li class="tagtop__item"><a class="tagtop__link" href="' + tagArr[i].href + '">' + tagArr[i].text + '</a></li>';
+      }
+      $('.tagtop__list').append(html);
+      $(this).stop().hide();
+   });
+
+   // 채택하기버튼
+   $('.qnals__adoptbtn').click(function () {
+      $(this).parents('.qnals__block').addClass('qnals__block--selected');
+      $(this).remove();
+   });
+
    // Q&A 태그버튼 스와이퍼
    var swiper = new Swiper(".qna-tag", {
       slidesPerView: 'auto',
@@ -152,6 +171,36 @@ $(function () {
       spaceBetween: 10,
       slidesOffsetAfter: 34,
       loop: false,
+   });
+
+   // Q&A 
+   var swiper3 = new Swiper(".qnama__scroll", {
+      slidesPerView: 'auto',
+      freeMode: true,
+      grabCursor: true,
+      spaceBetween: 10,
+      slidesOffsetAfter: 34,
+      loop: false,
+      breakpoints: {
+         768: {
+            spaceBetween: 20,
+         }
+      }
+   });
+
+   // FREE
+   var swiper4 = new Swiper(".frma__scroll", {
+      slidesPerView: 'auto',
+      freeMode: true,
+      grabCursor: true,
+      spaceBetween: 10,
+      slidesOffsetAfter: 34,
+      loop: false,
+      breakpoints: {
+         768: {
+            spaceBetween: 20,
+         }
+      }
    });
 
 });

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Talk IT</title>
+   <link rel="stylesheet" href="../../css/common.css">
+   <link rel="stylesheet" href="../../css/page.css">
+
+   <script src="../../js/lib/tagify/tagify.min.js"></script>
+   <link rel="stylesheet" href="../../js/lib/tagify/tagify.css">
+
+   <script src="../../js/lib/jquery/jquery-3.6.0.min.js"></script>
+   <link rel="stylesheet" href="../../js/lib/swiper/swiper-bundle.min.css" />
+   <script src="../../js/lib/swiper/swiper-bundle.min.js"></script>
+   <script src="../../js/pub.js"></script>
+   <script>
+      $(function () {
+         if (document.getElementById('tag')) {
+            var input = document.getElementById('tag');
+            var tagify = new Tagify(input); // initialize Tagify
+
+            // 태그가 추가되면 이벤트 발생
+            tagify.on('add', function () {
+               // console.log(tagify.value); // 입력된 태그 정보 객체
+            });
+         }
+      });
+
+   </script>
+</head>
+
+<body>
+   <div id="wrap">
+
+      <!-- HEADER -->
+      <header class="header">
+         <div class="header-top">
+            <div class="header-top__inner">
+               <h1 class="header-top__logo">
+                  <a href="#">
+                     <img src="../../images/logo.svg" alt="">
+                  </a>
+               </h1>
+               <ul class="lnb">
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">LIVE</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">VIDEO BOOK</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link lnb__link--white" href="#">
+                        BRAND CORNER
+                        <i class="lnb__icon"></i>
+                     </a>
+                     <ul class="sublnb">
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">야너두, 시티즌 데이터사이언티스트</a>
+                        </li>
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">구해줘! SaaS</a>
+                        </li>
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">세미나 읽어주는 남자, 세미남</a>
+                        </li>
+                        <li class="sublnb__item">
+                           <a class="sublnb__link" href="#">퀘스트 소프트웨어</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">PREMIUM SEMINAR</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">ONLINE SEMINAR</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">VOD</a>
+                  </li>
+                  <li class="lnb__item">
+                     <a class="lnb__link" href="#">EVENT</a>
+                  </li>
+               </ul>
+               <ul class="header-login">
+                  <li class="header-login__item">
+                     <a id="searchBtn" class="header-login__link" href="#">
+                        <img class="header-login__search" src="../../images/icons/search-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="header-login__item">
+                     <a class="header-login__link" href="#">로그인</a>
+                  </li>
+                  <li class="header-login__item">
+                     <a class="header-login__link" href="#">회원가입</a>
+                  </li>
+                  <!-- 로그인 상태일때 -->
+                  <!-- <li class="header-login__item header-login__item--in">
+                     <a class="header-login__my" href="#">
+                        <img src="images/person03.png" alt="">
+                        <span>고우성</span>
+                     </a>
+                  </li> -->
+               </ul>
+               <div id="mobileMenu">
+                  <ul class="header-login">
+                     <li class="header-login__item">
+                        <a class="header-login__link" href="#">
+                           <img class="header-login__default" src="../../images/user-default.png" alt="">
+                           로그인
+                           <img class="header-login__move" src="../../images/icons/arrow-white-icon.png" alt="">
+                        </a>
+                     </li>
+                     <!-- 로그인 상태일때 -->
+                     <!-- <li class="header-login__item header-login__item--in">
+                        <a class="header-login__my" href="#">
+                           <img src="images/person03.png" alt="">
+                           <span>고우성</span>
+                           <img class="header-login__move" src="images/icons/arrow-white-icon.png" alt="">
+                        </a>
+                     </li> -->
+                     <li class="header-login__item">
+                        <button id="menuCloseBtn" type="button">
+                           <img src="../../images/icons/close-icon.png" alt="">
+                        </button>
+                     </li>
+                  </ul>
+                  <div id="searchPop">
+                     <div class="searchPop__inner">
+                        <form class="search" action="">
+                           <input class="search__input" type="text" placeholder="구해줘! SaaS와 관련된 자료를 검색해 보세요.">
+                           <button class="search__btn" type="submit">
+                              <img src="../../images/icons/search-icon.png" alt="">
+                           </button>
+                        </form>
+                     </div>
+                  </div>
+                  <ul class="lnb">
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">LIVE</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">VIDEO BOOK</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link lnb__link--white" href="#">
+                           BRAND CORNER
+                           <i class="lnb__icon"></i>
+                        </a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">PREMIUM SEMINAR</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">ONLINE SEMINAR</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">VOD</a>
+                     </li>
+                     <li class="lnb__item">
+                        <a class="lnb__link" href="#">EVENT</a>
+                     </li>
+                  </ul>
+               </div>
+               <button id="menuBtn" type="button">
+                  <img src="../../images/icons/menu-icon.svg" alt="">
+               </button>
+            </div>
+         </div>
+         <div class="header-btm">
+            <div class="header-btm__inner">
+               <h2 class="header-btm__tit">
+                  <span>브랜드코너</span>
+                  <strong>구해줘! SaaS</strong>
+               </h2>
+               <nav class="header-btm__nav">
+                  <ul class="header-btm__list">
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">개요</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">웨비나</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">Q&A</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">자유게시판</a>
+                     </li>
+                     <li class="header-btm__item">
+                        <a class="header-btm__link" href="#">VOD</a>
+                     </li>
+                  </ul>
+                  <button class="downbtn" type="button">
+                     <img src="../../images/icons/arrow-white-icon.png" alt="">
+                  </button>
+                  <button class="sbscr-btn" type="button">
+                     <span>구독하기</span>
+                     <img src="../../images/icons/check-icon.png" alt="">
+                  </button>
+                  <!-- 구독중일때 -->
+                  <!-- <button class="sbscr-btn sbscr-btn--check" type="button">
+                     <span>구독중</span>
+                     <img src="images/icons/check-icon.png" alt="">
+                  </button> -->
+               </nav>
+            </div>
+         </div>
+      </header>
+
+      <!-- PAGE -->
+      <main id="main">
+
+         <section class="reg">
+            <div class="reg__inner">
+               <h3 class="reg__tit">게시글 작성</h3>
+               <form action="">
+                  <div class="reg__block">
+                     <dl class="reg__dl">
+                        <dt class="reg__dt">제목</dt>
+                        <dd class="reg__dd">
+                           <input class="reg__input" type="text" placeholder="제목을 입력하세요.">
+                        </dd>
+                     </dl>
+                     <dl class="reg__dl">
+                        <dt class="reg__dt">내용</dt>
+                        <dd class="reg__dd">
+                           <div class="reg__edit"></div>
+                        </dd>
+                     </dl>
+                     <dl class="reg__dl">
+                        <dt class="reg__dt">태그</dt>
+                        <dd class="reg__dd">
+                           <div class="reg__search">
+                              <input id="tag" type="text" placeholder=", 관련 태그를 추가로 검색해 보세요">
+                           </div>
+                           <div class="reg__flex">
+                              <div class="reg__tag">
+                                 <span class="reg__span">아래의 검색된 태그를 선택하여 태그를 추가하세요.</span>
+                                 <ul class="reg__list">
+                                    <li class="reg__item">
+                                       <a class="reg__tagbtn" href="#">Cloud</a>
+                                    </li>
+                                    <li class="reg__item">
+                                       <a class="reg__tagbtn" href="#">클라우드</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="reg__btnbox">
+                                 <button class="reg__btn" type="button">취소하기</button>
+                                 <button class="reg__btn reg__btn--blue" type="submit">작성완료</button>
+                              </div>
+                           </div>
+                        </dd>
+                     </dl>
+                  </div>
+               </form>
+            </div>
+         </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+         <div class="footer__inner">
+            <div class="footer__top">
+               <h2 class="footer__logo">
+                  <a class="footer__logo-link" href="#">
+                     <img src="../../images/logo-white.svg" alt="">
+                  </a>
+               </h2>
+               <ul class="sns">
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/rss-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/facebook-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/blog-icon.png" alt="">
+                     </a>
+                  </li>
+                  <li class="sns__item">
+                     <a class="sns__link" href="#">
+                        <img src="../../images/icons/youtube-icon.png" alt="">
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer__btm">
+               <p class="footer__copy">Copyright © 토크아이티(주) All Rights Reserved.</p>
+               <ul class="footer__list">
+                  <li class="footer__item">
+                     <a class="footer__link" href="#">문의 및 약도</a>
+                  </li>
+                  <li class="footer__item">
+                     <a class="footer__link" href="#">이용약관</a>
+                  </li>
+                  <li class="footer__item">
+                     <a class="footer__link" href="#">개인정보 취급방침</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+   </div>
+</body>
+
+</html>
