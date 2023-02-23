@@ -91,6 +91,7 @@
 
 /* Q&A */
 .qna { padding-top: 60px; }
+.qna--mab60 { padding-bottom: 60px; }
 .qna--mgb60 { margin-bottom: 60px; }
 .qna-tag { padding-top: 20px !important; margin-bottom: 20px; overflow: hidden; position: relative; }
 .qna-tag::after { content: ''; display: block; width: 34px; height: 34px; background: linear-gradient(270deg, #FFFFFF 30.56%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%); position: absolute; bottom: 0; right: 0; z-index: 2; }
@@ -100,6 +101,7 @@
 .qna-tag__link--focused { border: 1px solid #457FEE; color: #457FEE; }
 .qna-tag__link:hover { opacity: 0.4; }
 .qna__list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.qna__list--mab40 { margin-bottom: 40px; }
 .qna__item { border: 1px solid #E0E0E0; border-radius: 14px; transition: all .3s; position: relative; top: 0; }
 .qna__item:hover { border: 1px solid #000; top: -5px; }
 .qna__item:hover .qna__div { opacity: 0.6; }
@@ -140,6 +142,7 @@
 /* FREE BOARD */
 .free { margin-bottom: 60px; }
 .free__list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-top: 20px; }
+.free__list--mgb40 { margin-bottom: 40px; }
 .free__item { border: 1px solid #e0e0e0; border-radius: 11px; padding: 26px 20px; transition: all 0.3s; position: relative; top: 0; }
 .free__item:hover { border: 1px solid #000; top: -5px; }
 .free__item:hover .free__div { opacity: 0.6; }
@@ -152,6 +155,7 @@
 /* VOD */
 .vod { margin-bottom: 60px; }
 .vod__list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-top: 20px; }
+.vod__list--mgb60 { margin-bottom: 60px; }
 .vod__item { padding-top: 128px; position: relative; }
 .vod__top { width: 100%; height: 118px; border-radius: 14px; overflow: hidden; position: absolute; top: 0; left: 0; transition: all 0.3s; }
 .vod__top::before { content: ''; display: block; width: 100%; height: 100%; background: rgba(0,0,0,0.16); position: absolute; top: 0; left: 0; z-index: 2; }
@@ -416,7 +420,7 @@
 .reg__input::placeholder { color: #bbb; }
 .reg__edit { display: block; width: 100%; height: 484px; border: 1px solid #e9e9e9; border-radius: 14px; overflow: hidden; }
 .reg__search { width: 100%; height: 60px; border: 1px solid #e0e0e0; border-radius: 14px; padding: 12px 20px; margin-bottom: 10px; }
-.reg__search .tagify__input { color: #000 !important; }
+.reg__search .tagify__input { color: #000 !important; font-size: 14px; font-weight: 500; line-height: 27px !important; }
 .reg__search .tagify__tag>div>* { color: #000 !important; }
 .reg__search .tagify__tag__removeBtn::after { color: #000; }
 .reg__flex { display: flex; align-items: center; justify-content: space-between; }
@@ -513,6 +517,32 @@
 .rplls__like { display: flex; align-items: center; gap: 7.5px; font-size: 14px; line-height: 1.4; font-weight: 500; color: #666; }
 .rplls__like img { display: block; width: 15px; height: 15px; object-fit: contain; }
 .rplls__time { font-size: 13px; font-weight: 500; line-height: 19px; color: #a9a9a9; }
+
+/* PROFILE */
+.profile { background: linear-gradient(180deg, #000000 0%, #282828 100%); }
+.profile__inner { max-width: 1320px; padding: 60px 20px; margin: 0 auto; }
+.profile__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+.profile__fig { display: flex; align-items: center; gap: 50px; }
+.profile__fig > img { display: block; width: 160px; height: 160px; border-radius: 50%; border: 1px solid #e0e0e0; object-fit: cover; }
+.profile__cap { display: flex; flex-direction: column; gap: 8px; }
+.profile__userinfo { line-height: 23px; color: rgba(255,255,255,0.6); }
+.profile__user { display: flex; align-items: center; }
+.profile__medal { padding-top: 8px; position: relative; margin-right: 10px; }
+.profile__medal > img { display: block; width: 22px; height: 18px; object-fit: contain; position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
+.profile__cir { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #EDC748; font-size: 14px; font-weight: 700; line-height: 20px; color: #fff; position: relative; z-index: 2; }
+.profile__name { font-size: 36px; font-weight: 700; line-height: 52px; color: #fff; margin-right: 20px; }
+.profile__mail { display: flex; align-items: center; gap: 9px; padding: 6px 14px; background: #1f1f1f; border-radius: 14px; font-size: 14px; font-weight: 700; line-height: 1.6; color: #fff; transition: all 0.3s; }
+.profile__mail svg { display: block; width: 13px; height: 11px; transition: all 0.3s; }
+.profile__mail:hover { background: rgba(255,255,255,0.6); color: #000; }
+.profile__mail:hover svg path { fill: #000; }
+.profile__count { display: flex; align-items: center; gap: 60px; }
+.profile__dl { display: flex; flex-direction: column; gap: 3px; align-items: center; }
+.profile__dd { font-size: 23px; font-weight: 500; line-height: 34px; color: #fff; }
+.profile__dt { font-size: 17px; font-weight: 500; line-height: 26px; letter-spacing: -0.08em; color: rgba(255,255,255,0.7); }
+.career { display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px; }
+.career__list { display: flex; flex-direction: column; padding: 20px; padding-left: 40px; border: 1px solid #7e7e7e; border-radius: 14px; background: #353535; }
+.career__item { list-style: disc; color: #fff; line-height: 1.9; }
+.field .srchbx__list { padding-top: 20px; border-top: 0; }
 
 
 @media (max-width: 1200px) {
@@ -724,4 +754,21 @@
    .rplls__like { gap: 5px; font-size: 12px; }
    .rplls__like img { width: 13px; height: 13px; }
    .rplls__time { font-size: 12px; line-height: 17px; }
+
+   .profile__fig { gap: 20px; }
+   .profile__fig > img { width: 80px; height: 80px; }
+   .profile__cap { gap: 4px; }
+   .profile__userinfo { font-size: 12px; line-height: 17px; }
+   .profile__user { position: relative; padding-bottom: 38px; }
+   .profile__mail { position: absolute; bottom: 0; left: 0; padding: 5px 13px; font-size: 12px; gap: 5px; }
+   .profile__mail svg { width: 11px; height: 9px; }
+   .profile__medal { padding-top: 5px; margin-right: 7px; }
+   .profile__medal > img { width: 12.6px; height: 9px; }
+   .profile__cir { width: 13px; height: 13px; font-size: 8px; line-height: 12px; }
+   .profile__name { font-size: 20px; line-height: 29px; margin-right: 0; }
+   .profile__count { flex-direction: column; gap: 14px; }
+   .profile__dl { gap: 0; }
+   .profile__dd { font-size: 14px; line-height: 20px; }
+   .profile__dt { font-size: 11px; line-height: 16px; }
+   .career__item { font-size: 12px; }
 }
