@@ -147,6 +147,20 @@ $(function () {
       $(this).stop().hide();
    });
 
+   // 메인태그 더보기
+   var mainTagArr = [{ href: "#", text: "SaaS" }, { href: "#", text: "Cloud" }, { href: "#", text: "클라우드" }, { href: "#", text: "Javascript" }, { href: "#", text: "node.js" }, { href: "#", text: "SaaS" }];
+
+   $('#mainTagMoreBtn').click(function(e) {
+      e.preventDefault();
+      var html = '';
+      for (var i = 0; i < mainTagArr.length; i++) {
+         html += '<li class="keyword__item"><a class="keyword__link" href="' + mainTagArr[i].href + '">' + mainTagArr[i].text + '</a></li>';
+      }
+      $('.keyword__list').append(html);
+      $(this).stop().hide();
+   });
+
+
    // 채택하기버튼
    $('.qnals__adoptbtn').click(function () {
       $(this).parents('.qnals__block').addClass('qnals__block--selected');
