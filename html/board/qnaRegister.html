@@ -20,7 +20,44 @@
       $(function () {
          if (document.getElementById('tag')) {
             var input = document.getElementById('tag');
-            var tagify = new Tagify(input); // initialize Tagify
+            var tagify = new Tagify(input, {
+               whitelist: ["java", "javascript", "jsp", "C++", "Cloud", "C#", "PHP", "Python", "Perl"],
+               dropdown: {
+                  position: "manual",
+                  maxItems: Infinity,
+                  enabled: 0,
+                  classname: "customSuggestionsList"
+               },
+               templates: {
+                  dropdownItemNoMatch() {
+                     return `<div class='empty' style='display:none;'>Nothing Found</div>`;
+                  }
+               }
+            }); // initialize Tagify
+
+            renderSuggestionsList();  // defined down below
+
+            function renderSuggestionsList() {
+               tagify.dropdown.show(); // load the list
+               tagify.DOM.scope.parentNode.appendChild(tagify.DOM.dropdown);
+            }
+
+            $('.tagify__input').on('input', function () {
+               if ($(this).text() == '') {
+                  // console.log($(this).text());
+                  $('.reg__span').stop().hide();
+                  $('.customSuggestionsList').stop().hide();
+               } else {
+                  // console.log($(this).text());
+                  $('.reg__span').stop().show();
+                  $('.customSuggestionsList').stop().show();
+               }
+
+            });
+            $('.tagify__input').on('blur', function () {
+               $('.reg__span').stop().hide();
+               $('.customSuggestionsList').stop().hide();
+            })
 
             // 태그가 추가되면 이벤트 발생
             tagify.on('add', function () {
@@ -144,11 +181,25 @@
                      <li class="lnb__item">
                         <a class="lnb__link" href="#">VIDEO BOOK</a>
                      </li>
-                     <li class="lnb__item">
+                     <li class="lnb__item lnb__item--sub">
                         <a class="lnb__link lnb__link--white" href="#">
                            BRAND CORNER
                            <i class="lnb__icon"></i>
                         </a>
+                        <ul class="sublnb">
+                           <li class="sublnb__item">
+                              <a class="sublnb__link" href="#">야너두, 시티즌 데이터사이언티스트</a>
+                           </li>
+                           <li class="sublnb__item">
+                              <a class="sublnb__link" href="#">구해줘! SaaS</a>
+                           </li>
+                           <li class="sublnb__item">
+                              <a class="sublnb__link" href="#">세미나 읽어주는 남자, 세미남</a>
+                           </li>
+                           <li class="sublnb__item">
+                              <a class="sublnb__link" href="#">퀘스트 소프트웨어</a>
+                           </li>
+                        </ul>
                      </li>
                      <li class="lnb__item">
                         <a class="lnb__link" href="#">PREMIUM SEMINAR</a>
@@ -234,24 +285,21 @@
                         <dt class="reg__dt">태그</dt>
                         <dd class="reg__dd">
                            <div class="reg__search">
-                              <input id="tag" type="text" placeholder=", 관련 태그를 추가로 검색해 보세요">
+                              <input id="tag" type="text" placeholder="Tag 입력 후 Enter key 를 눌러주세요 (2개 이상)">
+                              
+                              <div class="reg__flex">
+                                 <div class="reg__tag">
+                                    <span class="reg__span">아래의 검색된 태그를 선택하여 태그를 추가하세요.</span>
+                                 </div>
+                                 <div class="reg__btnbox">
+                                    <button class="reg__btn" type="button">취소하기</button>
+                                    <button class="reg__btn reg__btn--blue" type="submit">작성완료</button>
+                                 </div>
+                              </div>
                            </div>
-                           <div class="reg__flex">
-                              <div class="reg__tag">
-                                 <span class="reg__span">아래의 검색된 태그를 선택하여 태그를 추가하세요.</span>
-                                 <ul class="reg__list">
-                                    <li class="reg__item">
-                                       <a class="reg__tagbtn" href="#">Cloud</a>
-                                    </li>
-                                    <li class="reg__item">
-                                       <a class="reg__tagbtn" href="#">클라우드</a>
-                                    </li>
-                                 </ul>
-                              </div>
-                              <div class="reg__btnbox">
-                                 <button class="reg__btn" type="button">취소하기</button>
-                                 <button class="reg__btn reg__btn--blue" type="submit">작성완료</button>
-                              </div>
+                           <div class="reg__btnbox reg__btnbox--mobile">
+                              <button class="reg__btn" type="button">취소하기</button>
+                              <button class="reg__btn reg__btn--blue" type="submit">작성완료</button>
                            </div>
                         </dd>
                      </dl>

@@ -62,6 +62,10 @@ $(function () {
       $('.calendar__item').removeClass('calendar__item--focused');
       $(this).addClass('calendar__item--focused');
    });
+   $('.wbnr__item').click(function() {
+      $('.wbnr__item').removeClass('wbnr__item--focused');
+      $(this).addClass('wbnr__item--focused');
+   });
 
    // 웨비나 일정 슬라이드
    var schdlSize = $('.schdl__list li').length - 2;
@@ -154,10 +158,15 @@ $(function () {
       e.preventDefault();
       var html = '';
       for (var i = 0; i < mainTagArr.length; i++) {
-         html += '<li class="keyword__item"><a class="keyword__link" href="' + mainTagArr[i].href + '">' + mainTagArr[i].text + '</a></li>';
+         if ($(this).hasClass('keyword__link')) {
+            html += '<li class="keyword__item"><a class="keyword__link" href="' + mainTagArr[i].href + '">' + mainTagArr[i].text + '</a></li>';
+         } else {
+            html += '<li class="srchbx__item"><a class="srchbx__link" href="' + mainTagArr[i].href + '">' + mainTagArr[i].text + '</a></li>';
+         }
+         
       }
-      $('.keyword__list').append(html);
-      $(this).stop().hide();
+      $(this).parents('ul').append(html);
+      $(this).parent().stop().hide();
    });
 
 
@@ -165,6 +174,14 @@ $(function () {
    $('.qnals__adoptbtn').click(function () {
       $(this).parents('.qnals__block').addClass('qnals__block--selected');
       $(this).remove();
+   });
+
+   $('.lnb__item--sub').click(function (e) {
+      var width = $(window).width();
+      if (width < 768) {
+         e.preventDefault();
+         $(this).find('.sublnb').stop().slideToggle();
+      }
    });
 
    // Q&A 태그버튼 스와이퍼
@@ -204,6 +221,21 @@ $(function () {
 
    // FREE
    var swiper4 = new Swiper(".frma__scroll", {
+      slidesPerView: 'auto',
+      freeMode: true,
+      grabCursor: true,
+      spaceBetween: 10,
+      slidesOffsetAfter: 34,
+      loop: false,
+      breakpoints: {
+         768: {
+            spaceBetween: 20,
+         }
+      }
+   });
+
+   // VOD
+   var swiper5 = new Swiper(".vodma", {
       slidesPerView: 'auto',
       freeMode: true,
       grabCursor: true,

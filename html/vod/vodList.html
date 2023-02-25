@@ -209,209 +209,332 @@
       <!-- PAGE -->
       <main id="main">
 
+         <!-- VOD MAIN -->
+         <section class="qnama">
+            <div class="qnama__inner">
+               <h2 class="qnama__title">
+                  <strong>VOD</strong>
+               </h2>
+               <h3 class="title">
+                  <div class="title__block">
+                     <i class="title__icon"></i>
+                     <span class="title__txt title__txt--white">실시간 인기 VOD</span>
+                  </div>
+               </h3>
+               <div class="vodma swiper">
+                  <ul class="vodma__list swiper-wrapper">
+                     <li class="vodma__item swiper-slide">
+                        <a class="vodma__link" href="#">
+                           <div class="vodma__top">
+                              <img class="vodma__img" src="../../images/schedule01.png" alt="">
+                              <span class="vodma__time">1:30:05</span>
+                           </div>
+                           <h4 class="vodma__tit">데이터 분석 플랫폼 빠르고, 쉽고, 똑똑하게 사용하기</h4>
+                        </a>
+                        <div class="tag">
+                           <a class="tag__link tag__link--gray" href="#">Saas</a>
+                           <a class="tag__link tag__link--gray" href="#">Cloud</a>
+                           <a class="tag__link tag__link--gray" href="#">클라우드</a>
+                        </div>
+                     </li>
+                     <li class="vodma__item swiper-slide">
+                        <a class="vodma__link" href="#">
+                           <div class="vodma__top">
+                              <img class="vodma__img" src="../../images/schedule02.png" alt="">
+                              <span class="vodma__time">1:30:05</span>
+                           </div>
+                           <h4 class="vodma__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                        </a>
+                        <div class="tag">
+                           <a class="tag__link tag__link--gray" href="#">Saas</a>
+                           <a class="tag__link tag__link--gray" href="#">Cloud</a>
+                           <a class="tag__link tag__link--gray" href="#">클라우드</a>
+                        </div>
+                     </li>
+                     <li class="vodma__item swiper-slide">
+                        <a class="vodma__link" href="#">
+                           <div class="vodma__top">
+                              <img class="vodma__img" src="../../images/schedule03.png" alt="">
+                              <span class="vodma__time">1:30:05</span>
+                           </div>
+                           <h4 class="vodma__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                        </a>
+                        <div class="tag">
+                           <a class="tag__link tag__link--gray" href="#">Saas</a>
+                           <a class="tag__link tag__link--gray" href="#">Cloud</a>
+                           <a class="tag__link tag__link--gray" href="#">클라우드</a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+
          <!-- CONTENTS -->
          <div class="contents">
             <div class="contents__inner">
                <section class="contents__left">
 
-                  <!-- Q&A SINGLE-->
-                  <article class="qnasg">
-                     <div class="qnasg__block">
-                        <h3 class="qnasg__tit">
-                           <i>Q</i>
-                           <span>일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</span>
-                        </h3>
-                        <div class="qnasg__flex">
-                           <p class="qnasg__con">디지털혁신/SW&Cloud/보안/IT인프라 분야의 신제품과 기술트렌드를 전문가들과 짧고 진하게 생방송토크로 진행합니다. 일방적인 정보 전달이 아니라, 수 백명의 기업 IT인들과 전문가들이 서로 수평적으로 논의하는 소통의 IT문화를 함께 만들어 나가길 기대합니다 <br><br>일반적으로 쿠버네티스 환경에서 데이터베이스 구성은 어떻게 고려하나요?</p>
-                           <div class="tag">
-                              <a class="tag__link" href="">Saas</a>
-                              <a class="tag__link" href="">Cloud</a>
-                              <a class="tag__link" href="">클라우드</a>
-                           </div>
-                        </div>
-                        <div class="qnasg__info">
-                           <div class="qnasg__data">
-                              <span class="qnasg__count">
-                                 <img src="../../images/icons/like-icon.png" alt="">
-                                 6
-                              </span>
-                              <span class="qnasg__count">
-                                 <img src="../../images/icons/reply-icon.png" alt="">
-                                 6
-                              </span>
-                           </div>
-                           <div class="qnasg__people">
-                              <div class="qnasg__group">
-                                 <img src="../../images/person01.png" alt="">
-                                 김*원
-                              </div>
-                              <span class="qnasg__time">1시간 전</span>
-                           </div>
-                        </div>
-                     </div>
-                  </article>
+                  <!-- Q&A LIST -->
+                  <article class="qna">
 
-                  <!-- 답변리스트 -->
-                  <article class="qnals">
-                     <h4 class="qnals__top">
-                        <span class="qnals__tit">
-                           <b>4</b>개의 답변이 있습니다
-                        </span>
+                     <div class="qnama__selbox">
+                        <div class="qna-tag swiper">
+                           <ul id="list" class="qna-tag__list swiper-wrapper">
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link qna-tag__link--focused" href="#">전체</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#SaaS</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Cloud</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#클라우드</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Javascript</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#node.js</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#SaaS</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Cloud</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#클라우드</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Javascript</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#node.js</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#클라우드</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#Javascript</a>
+                              </li>
+                              <li class="qna-tag__item swiper-slide">
+                                 <a class="qna-tag__link" href="#">#node.js</a>
+                              </li>
+                           </ul>
+                        </div>
                         <select class="qnama__select" name="" id="">
                            <option value="">최신순</option>
                         </select>
-                     </h4>
-                     <div class="qnals__list">
-                        <div class="qnals__block qnals__block--selected">
-                           <div class="qnals__user">
-                              <figure class="qnals__fig">
-                                 <img src="../../images/person03.png" alt="">
-                                 <figcaption class="qnals__cap">
-                                    <span class="qnals__name">고우성</span>
-                                    <span class="qnals__count">채택답변수 20건</span>
-                                 </figcaption>
-                              </figure>
-                              <div class="qnals__adopt">
-                                 <span class="qnals__selected">
-                                    <img src="../../images/icons/mark-icon.png" alt="">
-                                    채택됨
-                                 </span>
-                              </div>
-                           </div>
-                           <div class="qnals__con">
-                              <i>A</i>
-                              <div class="qnals__box">
-                                 <p class="qnals__txt">ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인 죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.</p>
-                                 <div class="tag">
-                                    <a class="tag__link" href="">Saas</a>
-                                    <a class="tag__link" href="">Cloud</a>
-                                    <a class="tag__link" href="">클라우드</a>
+                     </div>
+
+                     <div class="vodls">
+                        <ul class="vodls__list">
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule01.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
                                  </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
                               </div>
-                           </div>
-                           <div class="qnals__info">
-                              <div class="qnals__data">
-                                 <span class="qnals__re">
-                                    <img src="../../images/icons/like-icon.png" alt="">
-                                    6
-                                 </span>
-                                 <span class="qnals__re">
-                                    <img src="../../images/icons/reply-icon.png" alt="">
-                                    6
-                                 </span>
-                              </div>
-                              <div class="qnals__people">
-                                 <span class="qnals__time">30분 전</span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="qnals__block">
-                           <div class="qnals__user">
-                              <figure class="qnals__fig">
-                                 <img src="../../images/person03.png" alt="">
-                                 <figcaption class="qnals__cap">
-                                    <span class="qnals__name">고우성</span>
-                                    <span class="qnals__count">채택답변수 20건</span>
-                                 </figcaption>
-                              </figure>
-                              <div class="qnals__adopt">
-                                 <span class="qnals__selected">
-                                    <img src="../../images/icons/mark-icon.png" alt="">
-                                    채택됨
-                                 </span>
-                                 <button class="qnals__adoptbtn" type="button">채택하기</button>
-                              </div>
-                           </div>
-                           <div class="qnals__con">
-                              <i>A</i>
-                              <div class="qnals__box">
-                                 <p class="qnals__txt">ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인 죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.</p>
-                                 <div class="tag">
-                                    <a class="tag__link" href="">Saas</a>
-                                    <a class="tag__link" href="">Cloud</a>
-                                    <a class="tag__link" href="">클라우드</a>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule02.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
                                  </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
                               </div>
-                           </div>
-                           <div class="qnals__info">
-                              <div class="qnals__data">
-                                 <span class="qnals__re">
-                                    <img src="../../images/icons/like-icon.png" alt="">
-                                    6
-                                 </span>
-                                 <span class="qnals__re">
-                                    <img src="../../images/icons/reply-icon.png" alt="">
-                                    6
-                                 </span>
-                              </div>
-                              <div class="qnals__people">
-                                 <span class="qnals__time">30분 전</span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="qnals__block">
-                           <div class="qnals__user">
-                              <figure class="qnals__fig">
-                                 <img src="../../images/person03.png" alt="">
-                                 <figcaption class="qnals__cap">
-                                    <span class="qnals__name">고우성</span>
-                                    <span class="qnals__count">채택답변수 20건</span>
-                                 </figcaption>
-                              </figure>
-                              <div class="qnals__adopt">
-                                 <span class="qnals__selected">
-                                    <img src="../../images/icons/mark-icon.png" alt="">
-                                    채택됨
-                                 </span>
-                                 <button class="qnals__adoptbtn" type="button">채택하기</button>
-                              </div>
-                           </div>
-                           <div class="qnals__con">
-                              <i>A</i>
-                              <div class="qnals__box">
-                                 <p class="qnals__txt">ELK stack이라도 써보시면 힌트가 되실꺼 같습니다. ELK Stack은 operator로 되어 있습니다. 그리고 이미 인지하고 있는 것처럼 전통적인 관점 중에 하나인 죽으면 절대 안된다의 개념으로는 쿠버네티스로 전환은 어렵습니다. 사실 RAC도 A/A로 구성해서 죽어도 동작하도록 하는걸요.</p>
-                                 <div class="tag">
-                                    <a class="tag__link" href="">Saas</a>
-                                    <a class="tag__link" href="">Cloud</a>
-                                    <a class="tag__link" href="">클라우드</a>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule03.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
                                  </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
                               </div>
-                           </div>
-                           <div class="qnals__info">
-                              <div class="qnals__data">
-                                 <span class="qnals__re">
-                                    <img src="../../images/icons/like-icon.png" alt="">
-                                    6
-                                 </span>
-                                 <span class="qnals__re">
-                                    <img src="../../images/icons/reply-icon.png" alt="">
-                                    6
-                                 </span>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule01.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
+                                 </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
                               </div>
-                              <div class="qnals__people">
-                                 <span class="qnals__time">30분 전</span>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule02.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
+                                 </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
                               </div>
-                           </div>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule03.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
+                                 </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
+                              </div>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule01.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
+                                 </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
+                              </div>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule02.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
+                                 </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
+                              </div>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule03.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
+                                 </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
+                              </div>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule01.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
+                                 </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
+                              </div>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule02.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
+                                 </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
+                              </div>
+                           </li>
+                           <li class="vodls__item">
+                              <a class="vodls__link" href="#">
+                                 <div class="vodls__top">
+                                    <img class="vodls__img" src="../../images/schedule03.png" alt="">
+                                    <span class="vodls__time">1:30:05</span>
+                                 </div>
+                                 <h4 class="vodls__tit">차세대 비전 시스템에서 JAI Go-X 시리즈를 활용하는 방법</h4>
+                              </a>
+                              <div class="tag">
+                                 <a class="tag__link" href="#">Saas</a>
+                                 <a class="tag__link" href="#">Cloud</a>
+                                 <a class="tag__link" href="#">클라우드</a>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+
+                     <div class="vodls__btm">
+                        <div class="paging">
+                           <ul class="paging__list">
+                              <li class="paging__item">
+                                 <a class="paging__prev paging__disable" href="#">
+                                    <img src="../../images/icons/paging-icon.png" alt="">
+                                 </a>
+                              </li>
+                              <li class="paging__item">
+                                 <p class="paging__focus">1</p>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__link" href="#">2</a>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__link" href="#">3</a>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__link" href="#">4</a>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__link" href="#">5</a>
+                              </li>
+                              <li class="paging__item">
+                                 <a class="paging__next" href="#">
+                                    <img src="../../images/icons/paging-icon.png" alt="">
+                                 </a>
+                              </li>
+                           </ul>
                         </div>
                      </div>
                   </article>
-
-                  <!-- 답변작성 -->
-                  <article class="qnart">
-                     <h3 class="title">
-                        <div class="title__block">
-                           <i class="title__icon"></i>
-                           <span class="title__txt">답변작성</span>
-                        </div>
-                     </h3>
-                     <form class="qnart__form" action="">
-                        <div class="qnart__edit"></div>
-                        <div class="qnart__btnbox">
-                           <button class="qnart__btn" type="submit">작성완료</button>
-                        </div>
-                     </form>
-                  </article>
-
                </section>
 
                <!-- ASIDE -->

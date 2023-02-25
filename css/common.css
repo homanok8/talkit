@@ -136,11 +136,20 @@ body, input, textarea, button, select {
    .downbtn { display: block; width: 8px; height: 16px; margin: 0; padding: 0; border: 0; background: transparent; cursor: pointer; transform: rotate(90deg); }
    .downbtn.open { transform: rotate(-90deg); }
    .downbtn img { display: block; width: 100%; height: 100%; object-fit: contain; }
+   .downbtn img { display: block; width: 100%; height: 100%; object-fit: contain; }
+   .downbtn img { display: block; width: 100%; height: 100%; object-fit: contain; }
+   .sublnb { display: none; height: auto; position: relative; align-items: flex-start; padding: 16px 0; border-top: 0.5px solid #303030; }
+   .sublnb__item { margin-bottom: 12px; }
+   .sublnb__item:last-child { margin-bottom: 0; }
+   .sublnb__link { font-weight: 500; color: #9F9F9E; }
 
    #mobileMenu { display: block; width: 100%; height: 100vh; position: fixed; top: 0; left: 100%; z-index: 99; background: #000; }
    #mobileMenu .lnb { display: flex; }
    #mobileMenu .header-login { display: flex; }
    #menuBtn { display: block; }
+   .lnb__item:hover > .sublnb { position: relative; top: 0; }
+   .lnb__item { width: 100%; }
+   .lnb__item--sub { height: auto; flex-direction: column; align-items: flex-start; }
 
    #menuCloseBtn { display: block; width: 18px; height: 18px; padding: 0; margin: 0; border: 0; background: transparent; cursor: pointer; }
    #menuCloseBtn img { display: block; width: 100%; height: 100%; object-fit: contain; }
