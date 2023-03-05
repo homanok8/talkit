@@ -184,6 +184,28 @@ $(function () {
       }
    });
 
+   // 문의하기 팝업
+   $('.askpop').click(function () {
+      $('body').css({ 'overflow': 'visible' });
+      $('.askpop').stop().fadeOut();
+   });
+   $('.askpop__inner').click(function (e) {
+      e.stopPropagation();
+   });
+   $('#popOpen').click(function (e) {
+      e.preventDefault();
+      $('body').css({ 'overflow': 'hidden' });
+      $('.askpop').stop().fadeIn();
+   });
+   $('.popup-close').click(function () {
+      $('body').css({ 'overflow': 'visible' });
+      $('.askpop').stop().fadeOut();
+   });
+
+   $('.likeBtn').click(function () {
+      $(this).stop().toggleClass('like');
+   });
+
    // Q&A 태그버튼 스와이퍼
    var swiper = new Swiper(".qna-tag", {
       slidesPerView: 'auto',
