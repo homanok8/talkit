@@ -58,38 +58,57 @@ $(function () {
    });
 
    // 웨비나 일정 월별 클릭
-   $('.calendar__item').click(function() {
-      $('.calendar__item').removeClass('calendar__item--focused');
-      $(this).addClass('calendar__item--focused');
+   $('.calendar__item').click(function () {
+      if ($(this).hasClass('calendar__item--jan')) {
+         $('.calendar__item').removeClass('calendar__item--focused');
+         $(this).addClass('calendar__item--focused');
+         $('.schdl__slide').hide();
+         $('.schdl__empty').css({'display': 'flex'});
+      } else {
+         $('.calendar__item').removeClass('calendar__item--focused');
+         $(this).addClass('calendar__item--focused');
+         $('.schdl__slide').show();
+         $('.schdl__empty').css({'display': 'none'});
+      }
+      
    });
-   $('.wbnr__item').click(function() {
-      $('.wbnr__item').removeClass('wbnr__item--focused');
-      $(this).addClass('wbnr__item--focused');
+   $('.wbnr__item').click(function () {
+      if ($(this).hasClass('wbnr__item--jan')) {
+         $('.wbnr__item').removeClass('wbnr__item--focused');
+         $(this).addClass('wbnr__item--focused');
+         $('.wbnr__slide').hide();
+         $('.wbnr__empty').css({'display': 'flex'});
+      } else {
+         $('.wbnr__item').removeClass('wbnr__item--focused');
+         $(this).addClass('wbnr__item--focused');
+         $('.wbnr__slide').show();
+         $('.wbnr__empty').css({'display': 'none'});
+      }
    });
 
    // 웨비나 일정 슬라이드
    var schdlSize = $('.schdl__list li').length - 2;
    var schdlCount = 0;
 
-   $('.schdl__prev').click(function() {
+   $('.schdl__next').click(function() {
       var move = $('.schdl__list li').width() + 60;
 
       if (schdlSize > schdlCount) {
          schdlCount++;
          $('.schdl__list').stop().animate({ 'left': -1 * move * schdlCount + 'px' });
-         console.log(schdlCount);
+         // console.log(schdlCount);
       }
    });
-   $('.schdl__next').click(function() {
+   $('.schdl__prev').click(function() {
       var move = $('.schdl__list li').width() + 60;
 
       if (schdlCount > 0) {
          schdlCount--;
          $('.schdl__list').stop().animate({ 'left': -1 * move * schdlCount + 'px' });
-         console.log(schdlCount);
+         // console.log(schdlCount);
       } else {
          schdlCount = 0;
-         console.log(schdlCount);
+         // console.log(schdlCount);
       }
    });
 
